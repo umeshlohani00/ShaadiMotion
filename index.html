@@ -1,0 +1,1195 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>ShaadiMotion — Your Wedding Deserves More Than a PDF | Digital Wedding Invitation</title>
+<meta name="description" content="Create a beautiful, cinematic wedding invitation that opens like a card. Scratch to reveal the date, watch your film, RSVP in one tap. Design free, pay only when you publish.">
+<meta name="keywords" content="digital wedding invitation, online wedding invitation, video wedding invitation, Indian wedding invitation, scratch reveal invitation, wedding invitation website, digital shaadi card">
+<meta property="og:title" content="ShaadiMotion — Turn your wedding invitation into a celebration">
+<meta property="og:description" content="Cinematic, interactive wedding invitations guests open like a card, scratch to reveal, explore and remember. No app needed.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200&auto=format&fit=crop">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%236D1A2D'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='%23F5D98B' font-family='serif'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Outfit:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: {
+      ivory:'#FFF9F0', cream:'#FFF3E2', wine:'#6D1A2D', winedark:'#4A101E',
+      gold:'#C9A24B', goldlight:'#F5D98B', blush:'#F7D9D4',
+      charcoal:'#1E1B18', emeralddeep:'#0E5A4A'
+    },
+    fontFamily: {
+      serif:['"Playfair Display"','serif'],
+      cormorant:['"Cormorant Garamond"','serif'],
+      sans:['Outfit','sans-serif'],
+      script:['"Great Vibes"','cursive']
+    },
+    boxShadow: {
+      lux:'0 30px 80px -20px rgba(109,26,45,.25)',
+      card:'0 10px 40px -12px rgba(30,27,24,.18)',
+      gold:'0 8px 30px -6px rgba(201,162,75,.5)'
+    }
+  }}
+}
+</script>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{background:#FFF9F0;color:#1E1B18;font-family:Outfit,sans-serif;overflow-x:hidden}
+::selection{background:#6D1A2D;color:#FFF9F0}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:#FFF3E2}
+::-webkit-scrollbar-thumb{background:linear-gradient(#6D1A2D,#C9A24B);border-radius:20px}
+
+.gold-text{background:linear-gradient(105deg,#8a6420 0%,#C9A24B 25%,#F5D98B 50%,#C9A24B 75%,#8a6420 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
+@keyframes shine{to{background-position:200% center}}
+
+.btn-gold{background:linear-gradient(135deg,#C9A24B,#E8C876 50%,#C9A24B);background-size:200%;color:#2b1508;font-weight:700;box-shadow:0 12px 30px -8px rgba(201,162,75,.6);transition:.4s}
+.btn-gold:hover{background-position:right;transform:translateY(-2px);box-shadow:0 18px 40px -8px rgba(201,162,75,.7)}
+.btn-wine{background:#6D1A2D;color:#FFF9F0;transition:.35s}
+.btn-wine:hover{background:#4A101E;transform:translateY(-2px);box-shadow:0 16px 34px -10px rgba(109,26,45,.5)}
+.btn-outline{border:1.5px solid rgba(109,26,45,.3);transition:.3s}
+.btn-outline:hover{border-color:#6D1A2D;background:rgba(109,26,45,.06)}
+.btn-press:active{transform:scale(.97)}
+
+.grain::after{content:'';position:fixed;inset:0;pointer-events:none;opacity:.045;z-index:5;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+.ornament{display:flex;align-items:center;gap:12px;justify-content:center}
+.ornament::before,.ornament::after{content:'';height:1px;width:64px;background:linear-gradient(90deg,transparent,#C9A24B)}
+.ornament::after{background:linear-gradient(90deg,#C9A24B,transparent)}
+
+.reveal{opacity:0;transform:translateY(34px);transition:all .9s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+.hero-gradient{background:radial-gradient(1000px 600px at 80% -10%,rgba(201,162,75,.22),transparent),radial-gradient(900px 600px at 10% 20%,rgba(109,26,45,.12),transparent),linear-gradient(#FFF9F0,#FFF3E2)}
+.wine-gradient{background:radial-gradient(800px 500px at 50% 0%,rgba(201,162,75,.18),transparent),linear-gradient(180deg,#4A101E,#6D1A2D 60%,#4A101E)}
+.glass{background:rgba(255,249,240,.85);backdrop-filter:blur(18px)}
+.shimmer-line{height:1px;background:linear-gradient(90deg,transparent,#C9A24B,#F5D98B,#C9A24B,transparent);background-size:200%;animation:shine 4s linear infinite}
+.marquee{display:flex;white-space:nowrap;animation:marq 30s linear infinite}
+@keyframes marq{to{transform:translateX(-50%)}}
+.chip{font-size:11px;padding:4px 10px;border-radius:99px;font-weight:600;display:inline-block}
+
+/* ============ PHONE FRAME ============ */
+.phone-frame{width:min(330px,80vw);aspect-ratio:9/19;border-radius:46px;background:#111;padding:12px;box-shadow:0 50px 90px -25px rgba(0,0,0,.5),inset 0 0 0 2px #333;position:relative}
+.phone-screen{border-radius:35px;overflow:hidden;height:100%;position:relative;background:#FFF9F0}
+.phone-notch{position:absolute;top:20px;left:50%;transform:translateX(-50%);width:104px;height:24px;background:#111;border-radius:20px;z-index:30}
+
+/* ============ OPENABLE CARD (card that opens like an envelope) ============ */
+.oc{position:relative;perspective:1600px;width:100%}
+.oc-inner{position:relative;width:100%;aspect-ratio:var(--oc-ratio,4/5);transform-style:preserve-3d}
+.oc-body{position:absolute;inset:0;border-radius:22px;overflow:hidden;background:#0d0a09;z-index:1}
+.oc-page{position:absolute;inset:0;border-radius:22px;overflow:hidden;z-index:3;cursor:pointer;
+  transform-origin:left center;transform-style:preserve-3d;backface-visibility:hidden;
+  transition:transform 1.2s cubic-bezier(.62,.02,.24,1),box-shadow .5s ease;
+  box-shadow:0 34px 60px -22px rgba(0,0,0,.55);outline:none}
+.oc-page::before{content:'';position:absolute;top:0;bottom:0;left:0;width:26px;background:linear-gradient(90deg,rgba(0,0,0,.42),transparent);z-index:6;pointer-events:none}
+.oc-page::after{content:'';position:absolute;inset:0;border-radius:22px;box-shadow:inset 0 0 0 1.5px rgba(245,217,139,.35);pointer-events:none;z-index:7}
+.oc.open .oc-page{transform:rotateY(-174deg)}
+.oc:not(.open) .oc-page{animation:peek 6.5s ease-in-out infinite}
+@keyframes peek{0%,72%,100%{transform:rotateY(0)}82%{transform:rotateY(-7deg)}92%{transform:rotateY(-2deg)}}
+.oc.open .oc-page{animation:none}
+.oc-hint{transition:opacity .4s}
+.oc.open .oc-hint{opacity:0}
+.oc.open .oc-close{opacity:1;pointer-events:auto}
+.oc-close{position:absolute;top:10px;right:10px;z-index:8;width:34px;height:34px;border-radius:50%;
+  background:rgba(0,0,0,.55);color:#fff;font-size:14px;display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .45s .5s,transform .3s;backdrop-filter:blur(6px)}
+.oc-close:hover{transform:scale(1.08)}
+
+.wax{width:54px;height:54px;border-radius:50%;position:relative;
+  background:radial-gradient(circle at 35% 30%,#C24A5C,#6D1A2D 62%,#3E0C18);
+  box-shadow:0 10px 22px -8px rgba(0,0,0,.7),inset 0 2px 7px rgba(255,255,255,.28);
+  display:flex;align-items:center;justify-content:center;color:#F5D98B;
+  font-family:'Playfair Display',serif;font-weight:700;font-size:21px}
+.wax::after{content:'';position:absolute;inset:-7px;border-radius:50%;border:1.5px dashed rgba(245,217,139,.5);animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ============ SCRATCH CARD ============ */
+.scratch-wrap{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 20px 45px -18px rgba(30,27,24,.4);isolation:isolate}
+.scratch-under{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8px}
+.scratch-wrap canvas{position:absolute;inset:0;display:block;touch-action:none;cursor:crosshair;transition:opacity .9s ease}
+.scratch-wrap.revealed canvas{opacity:0;pointer-events:none}
+.scratch-reset{position:absolute;bottom:8px;right:8px;z-index:6;width:30px;height:30px;border-radius:50%;
+  background:rgba(255,255,255,.85);color:#6D1A2D;font-size:14px;display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:.35s;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.scratch-wrap:hover .scratch-reset{opacity:1}
+.scratch-wrap.revealed .scratch-reset{opacity:1}
+.burst-p{position:absolute;top:45%;width:9px;height:9px;border-radius:2px;pointer-events:none;z-index:9;animation:burst .95s ease-out forwards}
+@keyframes burst{0%{transform:translate(0,0) rotate(0);opacity:1}100%{transform:translate(var(--dx),-110px) rotate(420deg);opacity:0}}
+
+/* ============ TIMELINE / FAQ / MISC ============ */
+.faq-a{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.16,1,.3,1)}
+.faq-item.open .faq-a{max-height:340px}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-icon{transition:.35s}
+
+.tgrid .tcard{transition:.55s cubic-bezier(.16,1,.3,1)}
+.tgrid .tcard:hover{transform:translateY(-10px)}
+.tgrid .tcard:hover img{transform:scale(1.09)}
+.tgrid img{transition:1.1s cubic-bezier(.16,1,.3,1)}
+
+.toggle-pill.active{background:#6D1A2D;color:#fff;box-shadow:0 10px 24px -8px rgba(109,26,45,.55)}
+
+.toast{animation:toastIn .5s cubic-bezier(.16,1,.3,1)}
+@keyframes toastIn{from{transform:translateY(22px);opacity:0}}
+
+.modal-bg{position:fixed;inset:0;background:rgba(30,15,18,.62);backdrop-filter:blur(9px);z-index:200;
+  display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;pointer-events:none;transition:.35s}
+.modal-bg.show{opacity:1;pointer-events:auto}
+.modal-card{transform:translateY(26px) scale(.97);transition:.45s cubic-bezier(.16,1,.3,1);max-height:92vh;overflow-y:auto}
+.modal-bg.show .modal-card{transform:none}
+
+.field{width:100%;border:1.5px solid #e9ddd0;background:#fff;border-radius:12px;padding:11px 13px;font-size:14px;transition:.25s;outline:none}
+.field:focus{border-color:#C9A24B;box-shadow:0 0 0 3px rgba(201,162,75,.15)}
+.lbl{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8a7a6b;margin-bottom:6px;display:block}
+
+.mini-count{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(8px);border-radius:12px}
+
+.petal{position:absolute;top:-8vh;pointer-events:none;opacity:.75;animation:fall linear infinite}
+@keyframes fall{0%{transform:translateY(-10vh) rotate(0)}100%{transform:translateY(112vh) rotate(400deg)}}
+
+.float-slow{animation:floaty 7s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
+
+.no-scrollbar::-webkit-scrollbar{display:none}
+.no-scrollbar{scrollbar-width:none}
+
+#progressBar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#6D1A2D,#C9A24B,#F5D98B);z-index:120;width:0;transition:width .12s linear}
+
+@media (max-width:640px){
+  .phone-frame{width:min(290px,84vw)}
+  .wax{width:46px;height:46px;font-size:18px}
+}
+</style>
+</head>
+<body class="grain">
+
+<!-- SCROLL PROGRESS -->
+<div id="progressBar"></div>
+
+<!-- LOADER -->
+<div id="loader" class="fixed inset-0 z-[300] bg-ivory flex flex-col items-center justify-center gap-4 transition-opacity duration-700">
+  <div class="w-16 h-16 rounded-2xl bg-wine flex items-center justify-center text-goldlight font-serif text-4xl shadow-lux">S</div>
+  <div class="font-serif text-2xl text-wine">Shaadi<span class="gold-text">Motion</span></div>
+  <div class="text-xs tracking-[.3em] uppercase text-stone-500 text-center px-6">Turn your invitation into a celebration</div>
+  <div class="w-48 h-1.5 bg-[#f0e6d6] rounded-full overflow-hidden mt-2">
+    <div id="loadBar" class="h-full rounded-full" style="width:10%;background:linear-gradient(90deg,#6D1A2D,#C9A24B);transition:width .4s"></div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header id="siteHeader" class="fixed top-0 left-0 right-0 z-[110] glass border-b border-[#e8dcc8]/70">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 h-[64px] flex items-center justify-between gap-3">
+    <a href="#top" class="flex items-center gap-2.5 shrink-0">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-wine to-winedark flex items-center justify-center text-goldlight font-serif text-xl font-bold shadow">S</div>
+      <div class="leading-none">
+        <div class="font-serif font-bold text-lg text-charcoal">Shaadi<span class="text-wine">Motion</span></div>
+        <div class="text-[9px] tracking-[.22em] uppercase text-stone-500">Invitation Studio</div>
+      </div>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-6 text-[14px] font-medium text-stone-700">
+      <a href="#designs" class="hover:text-wine transition">Designs</a>
+      <a href="#unboxing" class="hover:text-wine transition flex items-center gap-1.5">Unboxing <span class="chip bg-wine text-white">NEW</span></a>
+      <a href="#scratch" class="hover:text-wine transition">Scratch Reveal</a>
+      <a href="#features" class="hover:text-wine transition">Features</a>
+      <a href="#pricing" class="hover:text-wine transition">Pricing</a>
+      <a href="#faq" class="hover:text-wine transition">FAQ</a>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a href="#unboxing" class="btn-outline hidden sm:inline-flex px-4 py-2.5 rounded-full text-sm font-semibold text-stone-700">Watch Unboxing</a>
+      <button onclick="openSignup()" class="btn-gold px-4 py-2.5 rounded-full text-sm btn-press">Create My Invitation</button>
+      <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 rounded-full border border-stone-300 flex items-center justify-center text-lg" aria-label="Menu">☰</button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="lg:hidden hidden border-t border-stone-200 bg-ivory px-4 py-4 space-y-1 text-[15px]">
+    <a href="#designs" class="block py-2.5 border-b border-stone-100">Designs</a>
+    <a href="#unboxing" class="block py-2.5 border-b border-stone-100">Unboxing ✨</a>
+    <a href="#scratch" class="block py-2.5 border-b border-stone-100">Scratch Reveal</a>
+    <a href="#features" class="block py-2.5 border-b border-stone-100">Features</a>
+    <a href="#pricing" class="block py-2.5 border-b border-stone-100">Pricing</a>
+    <a href="#faq" class="block py-2.5">FAQ</a>
+    <button onclick="openSignup()" class="w-full mt-3 btn-wine py-3 rounded-2xl font-bold text-sm">Create My Invitation</button>
+  </div>
+</header>
+
+<main id="top" class="pt-[64px]">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero-gradient relative overflow-hidden">
+    <div id="petalLayer" class="absolute inset-0 pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 md:px-6 py-14 md:py-24 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center relative z-10">
+      <div class="reveal">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/70 border border-gold/40 text-[11px] font-bold tracking-[.16em] uppercase text-wine mb-5">
+          <span class="w-1.5 h-1.5 rounded-full bg-emeralddeep animate-pulse"></span> Cards that open. Dates you scratch.
+        </div>
+
+        <h1 class="font-serif text-[40px] leading-[1.05] sm:text-5xl md:text-6xl text-charcoal">
+          Your wedding deserves<br>
+          more than a <span class="relative inline-block">
+            <span class="text-stone-400 italic">PDF</span>
+            <span class="absolute left-0 right-0 -bottom-1 h-[3px] bg-gradient-to-r from-wine via-gold to-transparent rounded-full"></span>
+          </span>
+        </h1>
+
+        <div class="font-script text-3xl md:text-4xl gold-text mt-4">It deserves an unboxing.</div>
+
+        <p class="mt-5 text-[15px] md:text-base leading-relaxed text-stone-600 max-w-xl">
+          Guests tap your link — a sealed card appears. It swings open like a real invitation, your film starts playing,
+          and they <b class="text-wine">scratch the gold foil</b> with a finger to reveal your wedding date. Then they RSVP. No app. One link.
+        </p>
+
+        <div class="flex flex-wrap gap-3 mt-8">
+          <button onclick="openSignup()" class="btn-gold px-7 py-4 rounded-full text-[15px] btn-press">Design Free → Pay on Publish</button>
+          <a href="#unboxing" class="btn-outline px-7 py-4 rounded-full text-[15px] font-semibold text-stone-700">▶ Watch a card open</a>
+        </div>
+
+        <div class="mt-9 flex flex-wrap items-center gap-6 text-sm">
+          <div><div class="font-serif text-2xl text-wine">3,124</div><div class="text-[11px] uppercase tracking-[.18em] text-stone-500">Couples</div></div>
+          <div class="w-px h-9 bg-stone-300"></div>
+          <div><div class="font-serif text-2xl text-wine">4.9★</div><div class="text-[11px] uppercase tracking-[.18em] text-stone-500">Rated</div></div>
+          <div class="w-px h-9 bg-stone-300"></div>
+          <div><div class="font-serif text-2xl text-wine">₹699</div><div class="text-[11px] uppercase tracking-[.18em] text-stone-500">One time</div></div>
+        </div>
+      </div>
+
+      <!-- PHONE WITH LIVE OPENABLE CARD -->
+      <div class="flex flex-col items-center reveal">
+        <div class="phone-frame float-slow">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <!-- ambient background -->
+            <div class="absolute inset-0" style="background:radial-gradient(300px 220px at 50% 12%,rgba(201,162,75,.35),transparent),linear-gradient(180deg,#4A101E,#2A0A12)"></div>
+            <div class="relative h-full flex flex-col">
+              <div class="pt-12 pb-2 text-center">
+                <div class="text-[9px] tracking-[.32em] uppercase text-goldlight/80" id="phoneTopHint">A sealed invitation</div>
+              </div>
+
+              <div class="flex-1 flex items-center justify-center px-4 pb-6">
+                <div class="oc" id="heroCard" style="--oc-ratio:4/5;max-width:250px">
+                  <div class="oc-inner">
+
+                    <!-- INVITATION INSIDE -->
+                    <div class="oc-body" style="background:linear-gradient(180deg,#5A1424,#3A0C18)">
+                      <div class="h-full overflow-y-auto no-scrollbar text-center" style="color:#FFF3E2">
+                        <div class="relative">
+                          <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=600&auto=format&fit=crop" class="w-full h-[104px] object-cover opacity-80" alt="Couple">
+                          <div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(58,12,24,.1),#3A0C18)"></div>
+                        </div>
+                        <div class="px-4 -mt-6 relative pb-5">
+                          <div class="font-script text-[30px] leading-tight gold-text">Meera &amp; Aarav</div>
+                          <div class="text-[8px] tracking-[.3em] uppercase text-goldlight/75 mt-1">request the honour of your presence</div>
+                          <div class="ornament my-3"><span class="text-[10px] text-goldlight">❧</span></div>
+
+                          <div class="grid grid-cols-4 gap-1" data-countdown>
+                            <div class="mini-count py-1.5"><div class="text-sm font-bold text-white cd-d">00</div><div class="text-[7px] tracking-widest uppercase text-white/60">Days</div></div>
+                            <div class="mini-count py-1.5"><div class="text-sm font-bold text-white cd-h">00</div><div class="text-[7px] tracking-widest uppercase text-white/60">Hrs</div></div>
+                            <div class="mini-count py-1.5"><div class="text-sm font-bold text-white cd-m">00</div><div class="text-[7px] tracking-widest uppercase text-white/60">Min</div></div>
+                            <div class="mini-count py-1.5"><div class="text-sm font-bold text-white cd-s">00</div><div class="text-[7px] tracking-widest uppercase text-white/60">Sec</div></div>
+                          </div>
+
+                          <div class="text-[9px] tracking-[.25em] uppercase text-goldlight/70 mt-3 mb-1.5">Scratch to reveal the date</div>
+                          <div class="scratch-wrap" data-scratch style="height:74px">
+                            <div class="scratch-under" style="background:linear-gradient(135deg,#7A1F33,#C9A24B)">
+                              <div class="font-serif text-[15px] text-white leading-tight" data-wedding-date-short>18 Nov 2026</div>
+                              <div class="text-[9px] tracking-[.2em] uppercase text-white/85 mt-0.5">Jaipur • 7:30 PM</div>
+                            </div>
+                            <canvas></canvas>
+                            <button class="scratch-reset" title="Scratch again">↻</button>
+                          </div>
+
+                          <button onclick="toast('Demo RSVP — your guests will submit here ✨','gold')" class="btn-gold w-full mt-3 py-2.5 rounded-full text-[11px] btn-press">RSVP ♥</button>
+                          <div class="text-[8px] tracking-[.2em] uppercase text-goldlight/50 mt-2">Tap ♫ for music</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- CLOSED CARD COVER -->
+                    <div class="oc-page" data-oc-open tabindex="0" role="button" aria-label="Open the wedding card">
+                      <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=700&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover" alt="Sealed invitation">
+                      <div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(30,10,15,.35),rgba(30,10,15,.85))"></div>
+                      <div class="absolute inset-0" style="box-shadow:inset 0 0 0 1.5px rgba(245,217,139,.4);border-radius:22px"></div>
+                      <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-5">
+                        <div class="wax mb-5">S</div>
+                        <div class="font-script text-[34px] text-goldlight leading-none">Meera &amp; Aarav</div>
+                        <div class="text-[9px] tracking-[.34em] uppercase text-white/70 mt-3">Wedding Invitation</div>
+                        <div class="oc-hint mt-6 px-4 py-2 rounded-full text-[10px] font-bold tracking-[.16em] uppercase"
+                             style="background:rgba(245,217,139,.92);color:#3A0C18">Tap to open ▸</div>
+                      </div>
+                    </div>
+
+                    <button class="oc-close" data-oc-close aria-label="Close card">✕</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-5 text-[11px] text-stone-500 text-center max-w-xs">Live demo — open the card, then scratch the gold foil with your finger or mouse.</div>
+      </div>
+    </div>
+
+    <!-- MARQUEE -->
+    <div class="border-y border-[#e8dcc8] bg-ivory/70 overflow-hidden py-3.5 relative z-10">
+      <div class="marquee text-[12px] font-semibold tracking-[.2em] uppercase text-stone-500">
+        <div class="flex gap-10 pr-10">
+          <span>✧ Card opens like a real invitation</span><span>✧ Scratch to reveal the date</span><span>✧ Video Save-the-Date</span>
+          <span>✧ RSVP dashboard</span><span>✧ Live countdown</span><span>✧ Maps &amp; events</span><span>✧ Music</span>
+        </div>
+        <div class="flex gap-10 pr-10" aria-hidden="true">
+          <span>✧ Card opens like a real invitation</span><span>✧ Scratch to reveal the date</span><span>✧ Video Save-the-Date</span>
+          <span>✧ RSVP dashboard</span><span>✧ Live countdown</span><span>✧ Maps &amp; events</span><span>✧ Music</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= UNBOXING / VIDEO CARDS ================= -->
+  <section id="unboxing" class="py-16 md:py-24 bg-[#FFF9F0]">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center max-w-2xl mx-auto reveal">
+        <div class="chip bg-wine text-white mb-3">THE UNBOXING MOMENT</div>
+        <h2 class="font-serif text-4xl md:text-5xl text-charcoal">Films that open like a card</h2>
+        <div class="ornament my-4"><span class="text-gold text-sm">❧</span></div>
+        <p class="text-stone-600 text-[15px]">Every video on ShaadiMotion is wrapped in a sealed invitation. Tap the cover, watch it swing open, and your Save-the-Date film unrolls on the page. Close it and the card seals itself again.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7 mt-12">
+
+        <!-- CARD 1 -->
+        <div class="oc reveal" data-oc style="--oc-ratio:16/10">
+          <div class="oc-inner">
+            <div class="oc-body">
+              <video class="w-full h-full object-cover" src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+                     poster="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop"
+                     playsinline muted loop preload="none"></video>
+              <div class="absolute top-3 left-3 chip bg-black/50 text-white backdrop-blur">▶ Now playing</div>
+            </div>
+            <div class="oc-page" data-oc-open tabindex="0" role="button" aria-label="Open video card">
+              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover" alt="Cover">
+              <div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(30,10,15,.25),rgba(30,10,15,.88))"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-5 text-left text-white">
+                <div class="text-[10px] tracking-[.3em] uppercase text-goldlight mb-1">Save the Date Film</div>
+                <div class="font-serif text-2xl">Meera &amp; Aarav</div>
+                <div class="oc-hint text-[11px] text-white/80 mt-2">Tap to open the card ▸</div>
+              </div>
+              <div class="wax" style="position:absolute;top:14px;right:14px">S</div>
+            </div>
+            <button class="oc-close" data-oc-close aria-label="Close card">✕</button>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="oc reveal" data-oc style="--oc-ratio:16/10">
+          <div class="oc-inner">
+            <div class="oc-body">
+              <video class="w-full h-full object-cover" src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+                     poster="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=800&auto=format&fit=crop"
+                     playsinline muted loop preload="none"></video>
+              <div class="absolute top-3 left-3 chip bg-black/50 text-white backdrop-blur">▶ Now playing</div>
+            </div>
+            <div class="oc-page" data-oc-open tabindex="0" role="button" aria-label="Open video card">
+              <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover" alt="Cover">
+              <div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(30,10,15,.25),rgba(30,10,15,.88))"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-5 text-left text-white">
+                <div class="text-[10px] tracking-[.3em] uppercase text-goldlight mb-1">Sangeet Teaser</div>
+                <div class="font-serif text-2xl">A night of dancing</div>
+                <div class="oc-hint text-[11px] text-white/80 mt-2">Tap to open the card ▸</div>
+              </div>
+              <div class="wax" style="position:absolute;top:14px;right:14px">S</div>
+            </div>
+            <button class="oc-close" data-oc-close aria-label="Close card">✕</button>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="oc reveal md:col-span-2 lg:col-span-1" data-oc style="--oc-ratio:16/10">
+          <div class="oc-inner">
+            <div class="oc-body">
+              <video class="w-full h-full object-cover" src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+                     poster="https://images.unsplash.com/photo-1591604466107-ec97de577aff?q=80&w=800&auto=format&fit=crop"
+                     playsinline muted loop preload="none"></video>
+              <div class="absolute top-3 left-3 chip bg-black/50 text-white backdrop-blur">▶ Now playing</div>
+            </div>
+            <div class="oc-page" data-oc-open tabindex="0" role="button" aria-label="Open video card">
+              <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover" alt="Cover">
+              <div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(30,10,15,.25),rgba(30,10,15,.88))"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-5 text-left text-white">
+                <div class="text-[10px] tracking-[.3em] uppercase text-goldlight mb-1">Destination Film</div>
+                <div class="font-serif text-2xl">Udaipur Nights</div>
+                <div class="oc-hint text-[11px] text-white/80 mt-2">Tap to open the card ▸</div>
+              </div>
+              <div class="wax" style="position:absolute;top:14px;right:14px">S</div>
+            </div>
+            <button class="oc-close" data-oc-close aria-label="Close card">✕</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-8 text-xs text-stone-500">Videos autoplay muted inside the opened card — exactly how your guests will experience it on WhatsApp.</div>
+    </div>
+  </section>
+
+  <!-- ================= SCRATCH REVEAL ================= -->
+  <section id="scratch" class="py-16 md:py-24 wine-gradient text-white relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div class="reveal">
+        <div class="chip bg-goldlight text-winedark mb-3">THE SCRATCH MOMENT</div>
+        <h2 class="font-serif text-4xl md:text-5xl leading-tight">Gold foil. One finger.<br><span class="gold-text">The date they'll never forget.</span></h2>
+        <div class="ornament my-5" style="justify-content:flex-start"><span class="text-goldlight text-sm">❧</span></div>
+        <p class="text-white/75 leading-relaxed max-w-lg">Your guests scratch away a shimmering gold layer to uncover your wedding date, city and time — the same satisfying gesture as a lottery card, but far more meaningful. Under the foil sits a photo of you both, your date and your venue.</p>
+
+        <div class="grid sm:grid-cols-3 gap-3 mt-8">
+          <div class="p-4 rounded-2xl" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14)">
+            <div class="text-2xl mb-1">🪙</div><div class="font-bold text-sm">Drag to scratch</div><div class="text-[11px] text-white/60 mt-1">Works with touch &amp; mouse</div>
+          </div>
+          <div class="p-4 rounded-2xl" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14)">
+            <div class="text-2xl mb-1">✨</div><div class="font-bold text-sm">Auto reveal</div><div class="text-[11px] text-white/60 mt-1">Pops at 45% scratched</div>
+          </div>
+          <div class="p-4 rounded-2xl" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14)">
+            <div class="text-2xl mb-1">📲</div><div class="font-bold text-sm">Add to RSVP</div><div class="text-[11px] text-white/60 mt-1">Guest replies in one tap</div>
+          </div>
+        </div>
+
+        <button onclick="resetAllScratch()" class="btn-gold px-6 py-3.5 rounded-full text-sm mt-8 btn-press">↻ Re-foil &amp; try again</button>
+      </div>
+
+      <div class="reveal">
+        <div class="scratch-wrap mx-auto" data-scratch style="max-width:520px;height:300px">
+          <div class="scratch-under" style="background:linear-gradient(180deg,#2A0A12,#6D1A2D)">
+            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-45" alt="Revealed couple">
+            <div class="relative z-10 px-6">
+              <div class="text-[10px] tracking-[.4em] uppercase text-goldlight">Save the date</div>
+              <div class="font-script text-4xl md:text-5xl gold-text mt-2">Meera &amp; Aarav</div>
+              <div class="font-serif text-xl md:text-2xl text-white mt-3" data-wedding-date>Wednesday, 18 November 2026</div>
+              <div class="text-[11px] tracking-[.28em] uppercase text-white/70 mt-2">The Palace Lawns • Jaipur • 7:30 PM</div>
+            </div>
+          </div>
+          <canvas></canvas>
+          <button class="scratch-reset" title="Scratch again">↻</button>
+        </div>
+        <div class="text-center text-[11px] text-white/50 mt-4">Scratch with your finger ↑ — it takes about three swipes.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DESIGNS ================= -->
+  <section id="designs" class="py-16 md:py-24 bg-[#FFF3E2]">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-5 reveal">
+        <div>
+          <div class="chip bg-gold/30 text-wine mb-3">12 ORIGINAL DESIGNS</div>
+          <h2 class="font-serif text-4xl md:text-5xl text-charcoal">Pick a mood. We'll cut the foil.</h2>
+          <p class="text-stone-600 mt-3 max-w-xl text-[15px]">Every design ships with the opening-card animation and a scratch reveal built in. Swap colours, fonts and photos in seconds.</p>
+        </div>
+        <button onclick="openSignup()" class="btn-wine px-6 py-3.5 rounded-full text-sm btn-press shrink-0">Start with any design</button>
+      </div>
+
+      <div class="tgrid grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        <!-- template cards injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES ================= -->
+  <section id="features" class="py-16 md:py-24 bg-[#FFF9F0]">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center max-w-2xl mx-auto reveal">
+        <div class="chip bg-emeralddeep text-white mb-3">EVERYTHING INCLUDED</div>
+        <h2 class="font-serif text-4xl md:text-5xl text-charcoal">Built for real Indian weddings</h2>
+        <div class="ornament my-4"><span class="text-gold text-sm">❧</span></div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 mt-12">
+        <div class="reveal p-6 rounded-3xl bg-white shadow-card border border-[#f0e6d6] hover:-translate-y-1.5 transition duration-500">
+          <div class="w-12 h-12 rounded-2xl bg-wine text-goldlight text-xl flex items-center justify-center mb-4">🪪</div>
+          <h3 class="font-serif text-xl mb-1.5">Card that opens</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">A sealed cover with a wax seal. One tap and it swings open like a real invitation — on every phone.</p>
+        </div>
+        <div class="reveal p-6 rounded-3xl bg-white shadow-card border border-[#f0e6d6] hover:-translate-y-1.5 transition duration-500">
+          <div class="w-12 h-12 rounded-2xl bg-gold text-winedark text-xl flex items-center justify-center mb-4">🪙</div>
+          <h3 class="font-serif text-xl mb-1.5">Scratch to reveal</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Gold foil over your date. Guests scratch with a finger, sparkles burst, and the date is revealed forever.</p>
+        </div>
+        <div class="reveal p-6 rounded-3xl bg-white shadow-card border border-[#f0e6d6] hover:-translate-y-1.5 transition duration-500">
+          <div class="w-12 h-12 rounded-2xl bg-charcoal text-goldlight text-xl flex items-center justify-center mb-4">🎬</div>
+          <h3 class="font-serif text-xl mb-1.5">Video inside a card</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Your Save-the-Date film plays the moment the card opens. Muted autoplay that never gets blocked.</p>
+        </div>
+        <div class="reveal p-6 rounded-3xl bg-white shadow-card border border-[#f0e6d6] hover:-translate-y-1.5 transition duration-500">
+          <div class="w-12 h-12 rounded-2xl bg-[#25D366] text-white text-xl flex items-center justify-center mb-4">💬</div>
+          <h3 class="font-serif text-xl mb-1.5">Made for WhatsApp</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">One link, opens instantly, no app install, works on 2G. Share to 500 guests in a single forward.</p>
+        </div>
+        <div class="reveal p-6 rounded-3xl bg-white shadow-card border border-[#f0e6d6] hover:-translate-y-1.5 transition duration-500">
+          <div class="w-12 h-12 rounded-2xl bg-emeralddeep text-white text-xl flex items-center justify-center mb-4">✉️</div>
+          <h3 class="font-serif text-xl mb-1.5">RSVP dashboard</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Guest count, meal preference, events attending and messages — live, exportable to CSV.</p>
+        </div>
+        <div class="reveal p-6 rounded-3xl bg-white shadow-card border border-[#f0e6d6] hover:-translate-y-1.5 transition duration-500">
+          <div class="w-12 h-12 rounded-2xl bg-blush text-wine text-xl flex items-center justify-center mb-4">♾️</div>
+          <h3 class="font-serif text-xl mb-1.5">Unlimited edits</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">Changed the muhurat? Add a photo? Edit as many times as you like — the link never changes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRICING ================= -->
+  <section id="pricing" class="py-16 md:py-24 bg-[#FFF3E2]">
+    <div class="max-w-6xl mx-auto px-4 md:px-6">
+      <div class="text-center max-w-2xl mx-auto reveal">
+        <div class="chip bg-wine text-white mb-3">SIMPLE ONE-TIME PRICING</div>
+        <h2 class="font-serif text-4xl md:text-5xl text-charcoal">Design free. Pay only to publish.</h2>
+        <div class="ornament my-4"><span class="text-gold text-sm">❧</span></div>
+        <p class="text-stone-600 text-[15px]">No subscription. No monthly fee. Unlimited edits, forever.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mt-12 items-start">
+        <div class="reveal p-7 rounded-3xl bg-white border border-[#ecdfcb] shadow-card">
+          <div class="font-bold text-stone-500 text-xs tracking-[.18em] uppercase">Save the Date</div>
+          <div class="font-serif text-4xl mt-2">₹299</div>
+          <div class="text-xs text-stone-500 mt-1">one-time • +GST</div>
+          <ul class="text-sm text-stone-600 mt-5 space-y-2.5">
+            <li>✓ One-page Save the Date card</li>
+            <li>✓ Opening-card animation</li>
+            <li>✓ Scratch-to-reveal date</li>
+            <li>✓ Countdown &amp; music</li>
+          </ul>
+          <button onclick="openSignup()" class="btn-outline w-full mt-6 py-3.5 rounded-2xl font-bold text-sm btn-press">Start free</button>
+        </div>
+
+        <div class="reveal p-7 rounded-3xl bg-white border-2 border-wine shadow-lux relative md:-mt-4">
+          <div class="absolute -top-3 left-7 chip bg-wine text-white">MOST LOVED</div>
+          <div class="font-bold text-wine text-xs tracking-[.18em] uppercase">Premium</div>
+          <div class="font-serif text-5xl mt-2 text-wine">₹999</div>
+          <div class="text-xs text-stone-500 mt-1">one-time • +GST</div>
+          <ul class="text-sm text-stone-600 mt-5 space-y-2.5">
+            <li>✓ Everything in Starter</li>
+            <li>✓ Video card that opens like an invitation</li>
+            <li>✓ 3D scratch reveal with photo</li>
+            <li>✓ Premium cinematic templates</li>
+            <li>✓ Advanced RSVP + CSV export</li>
+            <li>✓ Custom URL &amp; QR code</li>
+          </ul>
+          <button onclick="openSignup()" class="btn-gold w-full mt-6 py-4 rounded-2xl font-bold text-sm btn-press">Create My Invitation →</button>
+        </div>
+
+        <div class="reveal p-7 rounded-3xl bg-white border border-[#ecdfcb] shadow-card">
+          <div class="font-bold text-stone-500 text-xs tracking-[.18em] uppercase">Starter</div>
+          <div class="font-serif text-4xl mt-2">₹699</div>
+          <div class="text-xs text-stone-500 mt-1">one-time • +GST</div>
+          <ul class="text-sm text-stone-600 mt-5 space-y-2.5">
+            <li>✓ Full multi-section invitation</li>
+            <li>✓ Story, gallery, events, maps</li>
+            <li>✓ Scratch reveal + countdown</li>
+            <li>✓ RSVP &amp; WhatsApp sharing</li>
+          </ul>
+          <button onclick="openSignup()" class="btn-outline w-full mt-6 py-3.5 rounded-2xl font-bold text-sm btn-press">Start free</button>
+        </div>
+      </div>
+
+      <div class="text-center text-xs text-stone-500 mt-8">Prices in INR. GST invoice included. Hosting included for 12 months.</div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section id="faq" class="py-16 md:py-24 bg-[#FFF9F0]">
+    <div class="max-w-3xl mx-auto px-4 md:px-6">
+      <div class="text-center reveal">
+        <div class="chip bg-gold/30 text-wine mb-3">QUESTIONS</div>
+        <h2 class="font-serif text-4xl md:text-5xl text-charcoal">Everything you're wondering</h2>
+        <div class="ornament my-4"><span class="text-gold text-sm">❧</span></div>
+      </div>
+      <div id="faqList" class="mt-10 space-y-3"></div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="pb-20 md:pb-28 bg-[#FFF9F0]">
+    <div class="max-w-5xl mx-auto px-4 md:px-6">
+      <div class="reveal rounded-[32px] wine-gradient p-9 md:p-14 text-center text-white relative overflow-hidden shadow-lux">
+        <div class="absolute inset-0 opacity-[.08]" style="background:radial-gradient(circle at 20% 20%,#F5D98B,transparent 45%),radial-gradient(circle at 80% 70%,#F5D98B,transparent 45%)"></div>
+        <div class="relative">
+          <div class="font-script text-4xl md:text-5xl gold-text">Your story, unboxed.</div>
+          <h2 class="font-serif text-3xl md:text-5xl mt-3">Create your invitation in 10 minutes.</h2>
+          <p class="text-white/70 mt-4 max-w-xl mx-auto text-sm md:text-base">Design free. Share a preview with family. Pay only when you're ready to publish — one payment, no subscription.</p>
+          <div class="flex flex-wrap justify-center gap-3 mt-8">
+            <button onclick="openSignup()" class="btn-gold px-8 py-4 rounded-full font-bold btn-press">Create My Invitation</button>
+            <a href="#unboxing" class="px-8 py-4 rounded-full font-bold border border-white/30 hover:bg-white/10 transition btn-press">See it open again</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-charcoal text-stone-300">
+  <div class="shimmer-line"></div>
+  <div class="max-w-7xl mx-auto px-4 md:px-6 py-14 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-2">
+      <div class="flex items-center gap-2 mb-3">
+        <div class="w-9 h-9 rounded-xl bg-gold flex items-center justify-center font-serif text-xl font-bold text-winedark">S</div>
+        <div class="font-serif text-xl text-white">ShaadiMotion</div>
+      </div>
+      <p class="text-sm leading-relaxed text-stone-400 max-w-sm">Turn your wedding invitation into a celebration. Cards that open, films that play and dates you scratch to reveal — no app needed.</p>
+      <div class="mt-4 flex gap-2 flex-wrap">
+        <span class="chip bg-white/10">Design free</span>
+        <span class="chip bg-white/10">Pay once</span>
+        <span class="chip bg-white/10">No subscription</span>
+      </div>
+    </div>
+    <div>
+      <div class="text-white font-semibold mb-3 text-sm tracking-widest uppercase">Product</div>
+      <div class="space-y-2 text-sm">
+        <a href="#designs" class="block hover:text-goldlight">Designs</a>
+        <a href="#unboxing" class="block hover:text-goldlight">Unboxing Videos</a>
+        <a href="#scratch" class="block hover:text-goldlight">Scratch Reveal</a>
+        <a href="#pricing" class="block hover:text-goldlight">Pricing</a>
+        <a href="#features" class="block hover:text-goldlight">Features</a>
+      </div>
+    </div>
+    <div>
+      <div class="text-white font-semibold mb-3 text-sm tracking-widest uppercase">Company</div>
+      <div class="space-y-2 text-sm">
+        <a href="#" class="block hover:text-goldlight">About</a>
+        <a href="#" class="block hover:text-goldlight">Blog</a>
+        <a href="#" class="block hover:text-goldlight">Contact</a>
+        <a href="#faq" class="block hover:text-goldlight">FAQ</a>
+      </div>
+    </div>
+    <div>
+      <div class="text-white font-semibold mb-3 text-sm tracking-widest uppercase">Legal</div>
+      <div class="space-y-2 text-sm">
+        <a href="#" class="block hover:text-goldlight">Privacy</a>
+        <a href="#" class="block hover:text-goldlight">Terms</a>
+        <a href="#" class="block hover:text-goldlight">Refunds</a>
+        <a href="#" class="block hover:text-goldlight">Cookies</a>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 py-5 flex flex-col md:flex-row justify-between gap-2 text-xs text-stone-500">
+      <span>© 2026 ShaadiMotion. Original designs. Crafted with love in India.</span>
+      <span>Digital wedding invitation • Online wedding card • Scratch reveal • Wedding RSVP website</span>
+    </div>
+  </div>
+</footer>
+
+<div id="modalRoot"></div>
+<div id="toastRoot" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-[250] space-y-2 w-[92%] max-w-md"></div>
+
+<script>
+/* ============================================================
+   UTILITIES
+============================================================ */
+const $  = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+const esc = s => String(s ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+
+function toast(msg, type='success'){
+  const colors = {
+    success:'background:#0E5A4A;color:#fff',
+    error:'background:#6D1A2D;color:#fff',
+    info:'background:#1E1B18;color:#fff',
+    gold:'background:linear-gradient(135deg,#C9A24B,#E8C876);color:#2b1508'
+  };
+  const el = document.createElement('div');
+  el.className = 'toast px-4 py-3 rounded-2xl shadow-lux text-sm font-semibold flex items-center gap-2';
+  el.setAttribute('style', colors[type] || colors.info);
+  el.innerHTML = `<span>${type==='success'?'✓':type==='error'?'!':'✦'}</span><span>${esc(msg)}</span>`;
+  $('#toastRoot').appendChild(el);
+  setTimeout(()=>{ el.style.opacity='0'; el.style.transform='translateY(12px)'; el.style.transition='.4s'; setTimeout(()=>el.remove(),400); }, 3200);
+}
+
+/* ============================================================
+   LOADER + SCROLL PROGRESS + REVEALS
+============================================================ */
+(function loader(){
+  const bar = $('#loadBar');
+  let p = 10;
+  const iv = setInterval(()=>{ p = Math.min(p + Math.random()*22, 95); bar.style.width = p + '%'; }, 220);
+  window.addEventListener('load', ()=>{
+    clearInterval(iv); bar.style.width = '100%';
+    setTimeout(()=>{
+      const l = $('#loader');
+      l.style.opacity = '0';
+      setTimeout(()=> l.remove(), 700);
+    }, 450);
+  });
+  // safety: never hang
+  setTimeout(()=>{ const l=$('#loader'); if(l){ clearInterval(iv); l.style.opacity='0'; setTimeout(()=>l.remove(),700); } }, 4200);
+})();
+
+(function reveals(){
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold:.12 });
+  $$('.reveal').forEach(el=>io.observe(el));
+})();
+
+(function progress(){
+  const bar = $('#progressBar');
+  window.addEventListener('scroll', ()=>{
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+  }, { passive:true });
+})();
+
+/* mobile menu */
+$('#mobileMenuBtn').addEventListener('click', ()=> $('#mobileMenu').classList.toggle('hidden'));
+$$('#mobileMenu a').forEach(a=> a.addEventListener('click', ()=> $('#mobileMenu').classList.add('hidden')));
+
+/* ============================================================
+   PETALS (hero ambience)
+============================================================ */
+(function petals(){
+  const layer = $('#petalLayer');
+  if(!layer) return;
+  const colors = ['#F7D9D4','#F5D98B','#E8B4A8','#C9A24B'];
+  for(let i=0;i<14;i++){
+    const p = document.createElement('div');
+    const size = 6 + Math.random()*9;
+    p.className = 'petal';
+    p.style.left = (Math.random()*100) + '%';
+    p.style.width = size + 'px';
+    p.style.height = size*0.75 + 'px';
+    p.style.background = colors[i % colors.length];
+    p.style.borderRadius = '60% 40% 60% 40%';
+    p.style.animationDuration = (11 + Math.random()*10) + 's';
+    p.style.animationDelay = (-Math.random()*14) + 's';
+    layer.appendChild(p);
+  }
+})();
+
+/* ============================================================
+   OPENABLE CARD  — video cards open like a sealed invitation
+============================================================ */
+function initOpenableCards(){
+  $$('[data-oc]').forEach(oc=>{
+    const page  = oc.querySelector('[data-oc-open]') || oc.querySelector('.oc-page');
+    const video = oc.querySelector('video');
+    const close = oc.querySelector('[data-oc-close]');
+    if(!page) return;
+
+    let busy = false;
+
+    const openCard = ()=>{
+      if(oc.classList.contains('open') || busy) return;
+      busy = true;
+      oc.classList.add('open');
+      page.style.pointerEvents = 'none';
+      page.setAttribute('aria-hidden','true');
+      if(video){
+        try{ video.currentTime = 0; }catch(e){}
+        const pr = video.play();
+        if(pr && pr.catch) pr.catch(()=>{});   // muted autoplay is allowed
+      }
+      setTimeout(()=> busy = false, 500);
+    };
+
+    const closeCard = ()=>{
+      if(!oc.classList.contains('open') || busy) return;
+      busy = true;
+      oc.classList.remove('open');
+      if(video) video.pause();
+      setTimeout(()=>{
+        page.style.pointerEvents = 'auto';
+        page.removeAttribute('aria-hidden');
+        busy = false;
+      }, 400);
+    };
+
+    page.addEventListener('click', openCard);
+    page.addEventListener('keydown', e=>{
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openCard(); }
+    });
+    if(close) close.addEventListener('click', e=>{ e.stopPropagation(); closeCard(); });
+  });
+}
+
+/* ============================================================
+   SCRATCH CARD ENGINE
+============================================================ */
+const scratchInstances = [];
+
+function initScratch(wrap){
+  const canvas = wrap.querySelector('canvas');
+  if(!canvas) return;
+  const ctx = canvas.getContext('2d', { willReadFrequently:true });
+  const THRESHOLD = 0.45;
+
+  let W = 0, H = 0, dpr = 1;
+  let drawing = false, lastPt = null, revealed = false, moves = 0, lastCheck = 0;
+
+  function foil(){
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const r = wrap.getBoundingClientRect();
+    if(!r.width || !r.height) return;
+    W = r.width; H = r.height;
+
+    canvas.width  = Math.round(W * dpr);
+    canvas.height = Math.round(H * dpr);
+    canvas.style.width  = W + 'px';
+    canvas.style.height = H + 'px';
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.clearRect(0, 0, W, H);
+
+    // gold foil gradient
+    const g = ctx.createLinearGradient(0, 0, W, H);
+    g.addColorStop(0,   '#7d5a1c');
+    g.addColorStop(0.2, '#C9A24B');
+    g.addColorStop(0.42,'#F7E3A8');
+    g.addColorStop(0.58,'#C9A24B');
+    g.addColorStop(0.8, '#8a6420');
+    g.addColorStop(1,   '#E3C271');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, W, H);
+
+    // diagonal sheen
+    ctx.save();
+    ctx.globalAlpha = 0.13;
+    ctx.fillStyle = '#ffffff';
+    for(let i = -H; i < W; i += 20){
+      ctx.beginPath();
+      ctx.moveTo(i, 0); ctx.lineTo(i + 7, 0);
+      ctx.lineTo(i + H + 7, H); ctx.lineTo(i + H, H);
+      ctx.closePath(); ctx.fill();
+    }
+    ctx.restore();
+
+    // sparkle dust
+    ctx.save();
+    ctx.globalAlpha = 0.55;
+    ctx.fillStyle = '#FFF7DC';
+    for(let i = 0; i < 150; i++){
+      ctx.beginPath();
+      ctx.arc(Math.random()*W, Math.random()*H, Math.random()*1.6 + 0.4, 0, 6.3);
+      ctx.fill();
+    }
+    ctx.restore();
+
+    // labels
+    const titleSize = Math.max(13, Math.min(24, W * 0.075));
+    const subSize   = Math.max(9,  Math.min(12, W * 0.038));
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+
+    ctx.fillStyle = 'rgba(70,40,10,.78)';
+    ctx.font = `700 ${titleSize}px "Playfair Display", serif`;
+    ctx.fillText('Scratch here', W/2, H/2 - titleSize*0.42);
+
+    ctx.fillStyle = 'rgba(70,40,10,.62)';
+    ctx.font = `600 ${subSize}px Outfit, sans-serif`;
+    ctx.fillText('rub with your finger or mouse ✦', W/2, H/2 + titleSize*0.55);
+
+    ctx.globalCompositeOperation = 'destination-out';
+
+    revealed = false;
+    canvas.style.opacity = '1';
+    canvas.style.pointerEvents = 'auto';
+    wrap.classList.remove('revealed');
+  }
+
+  function point(e){
+    const r = canvas.getBoundingClientRect();
+    return { x: e.clientX - r.left, y: e.clientY - r.top };
+  }
+
+  function erase(to){
+    ctx.globalCompositeOperation = 'destination-out';
+    ctx.strokeStyle = '#000';
+    ctx.fillStyle = '#000';
+    ctx.lineWidth = Math.max(34, Math.min(52, W * 0.16));
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    if(lastPt){
+      ctx.beginPath();
+      ctx.moveTo(lastPt.x, lastPt.y);
+      ctx.lineTo(to.x, to.y);
+      ctx.stroke();
+    }
+    ctx.beginPath();
+    ctx.arc(to.x, to.y, Math.max(17, Math.min(26, W*0.08)), 0, 6.3);
+    ctx.fill();
+    lastPt = to;
+  }
+
+  function progress(){
+    const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+    let total = 0, clear = 0;
+    const step = 4 * 13;
+    for(let i = 3; i < data.length; i += step){
+      total++;
+      if(data[i] < 24) clear++;
+    }
+    return total ? clear / total : 0;
+  }
+
+  function burst(){
+    const colors = ['#C9A24B','#F5D98B','#6D1A2D','#E8B4A8','#FFF7DC'];
+    for(let i = 0; i < 22; i++){
+      const s = document.createElement('span');
+      s.className = 'burst-p';
+      s.style.left = (28 + Math.random()*44) + '%';
+      s.style.top  = (32 + Math.random()*30) + '%';
+      s.style.background = colors[i % colors.length];
+      s.style.setProperty('--dx', (Math.random()*220 - 110) + 'px');
+      s.style.animationDelay = (Math.random()*0.2) + 's';
+      wrap.appendChild(s);
+      setTimeout(()=> s.remove(), 1500);
+    }
+  }
+
+  function reveal(){
+    if(revealed) return;
+    revealed = true;
+    wrap.classList.add('revealed');
+    canvas.style.opacity = '0';
+    canvas.style.pointerEvents = 'none';
+    burst();
+    toast('✨ Revealed — Save the date!');
+  }
+
+  /* ---- pointer events ---- */
+  canvas.addEventListener('pointerdown', e=>{
+    if(revealed) return;
+    drawing = true;
+    lastPt = null;
+    canvas.setPointerCapture?.(e.pointerId);
+    erase(point(e));
+  });
+  canvas.addEventListener('pointermove', e=>{
+    if(!drawing || revealed) return;
+    e.preventDefault();
+    erase(point(e));
+    moves++;
+    const now = performance.now();
+    if(moves > 5 && now - lastCheck > 160){
+      lastCheck = now;
+      if(progress() >= THRESHOLD) reveal();
+    }
+  });
+  const stop = ()=>{
+    if(!drawing) return;
+    drawing = false; lastPt = null;
+    if(!revealed && progress() >= THRESHOLD) reveal();
+  };
+  canvas.addEventListener('pointerup', stop);
+  canvas.addEventListener('pointercancel', stop);
+  canvas.addEventListener('pointerleave', stop);
+  canvas.addEventListener('pointermove', e=>{ if(drawing) e.preventDefault(); }, { passive:false });
+
+  /* reset button */
+  const resetBtn = wrap.querySelector('.scratch-reset');
+  if(resetBtn) resetBtn.addEventListener('click', e=>{ e.stopPropagation(); foil(); });
+
+  /* resize */
+  let rt;
+  window.addEventListener('resize', ()=>{
+    clearTimeout(rt);
+    rt = setTimeout(()=>{ if(!revealed) foil(); }, 220);
+  });
+
+  scratchInstances.push({ repaint: foil });
+
+  /* first paint (after layout + fonts) */
+  requestAnimationFrame(()=> setTimeout(foil, 220));
+}
+
+function resetAllScratch(){
+  scratchInstances.forEach(s => s.repaint());
+  toast('Foil restored — scratch again ✨','gold');
+}
+
+/* ============================================================
+   COUNTDOWN + DYNAMIC WEDDING DATE
+============================================================ */
+(function weddingDate(){
+  const d = new Date();
+  d.setDate(d.getDate() + 88);
+  d.setHours(18, 0, 0, 0);
+  const iso = d.toISOString();
+  const long  = d.toLocaleDateString('en-IN', { weekday:'long', day:'numeric', month:'long', year:'numeric' });
+  const short = d.toLocaleDateString('en-IN', { day:'numeric', month:'short', year:'numeric' });
+
+  $$('[data-countdown]').forEach(el => el.dataset.countdown = iso);
+  $$('[data-wedding-date]').forEach(el => el.textContent = long);
+  $$('[data-wedding-date-short]').forEach(el => el.textContent = short);
+})();
+
+setInterval(()=>{
+  const now = Date.now();
+  $$('[data-countdown]').forEach(el=>{
+    const t = new Date(el.dataset.countdown).getTime();
+    let diff = t - now;
+    if(isNaN(t)) return;
+    if(diff < 0) diff = 0;
+    const dd = Math.floor(diff / 864e5);
+    const hh = Math.floor(diff / 36e5) % 24;
+    const mm = Math.floor(diff / 6e4) % 60;
+    const ss = Math.floor(diff / 1e3) % 60;
+    const set = (sel, v)=>{ const n = el.querySelector(sel); if(n) n.textContent = String(v).padStart(2,'0'); };
+    set('.cd-d', dd); set('.cd-h', hh); set('.cd-m', mm); set('.cd-s', ss);
+  });
+}, 1000);
+
+/* ============================================================
+   TEMPLATES GRID
+============================================================ */
+const TEMPLATES = [
+  { name:'Noor',        mood:'Royal',       img:'https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=700&auto=format&fit=crop', tag:'Muslim • Luxury',     accent:'#0E5A4A' },
+  { name:'Gulmohar',    mood:'Traditional', img:'https://images.unsplash.com/photo-1595407753234-0882f1e77954?q=80&w=700&auto=format&fit=crop', tag:'Traditional • Floral', accent:'#C0392B' },
+  { name:'The Palace',  mood:'Royal',       img:'https://images.unsplash.com/photo-1583086762675-8eb453df5467?q=80&w=700&auto=format&fit=crop', tag:'Royal • Luxury',      accent:'#6D1A2D' },
+  { name:'Monsoon Love',mood:'Modern',      img:'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=700&auto=format&fit=crop', tag:'Modern • Minimal',    accent:'#2C5F7C' },
+  { name:'Mehfil',      mood:'Dreamy',      img:'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=700&auto=format&fit=crop', tag:'Muslim • Midnight',   accent:'#5B2A86' },
+  { name:'Eternal Bloom',mood:'Romantic',   img:'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=700&auto=format&fit=crop', tag:'Floral • Luxury',     accent:'#B84A5E' }
+];
+
+(function renderTemplates(){
+  const grid = document.querySelector('.tgrid');
+  if(!grid) return;
+  grid.innerHTML = TEMPLATES.map((t,i)=>`
+    <div class="tcard reveal bg-white rounded-3xl overflow-hidden shadow-card border border-[#f0e6d6] group">
+      <div class="relative h-56 overflow-hidden">
+        <img src="${t.img}" alt="${esc(t.name)} wedding invitation template" class="w-full h-full object-cover" loading="lazy">
+        <div class="absolute inset-0" style="background:linear-gradient(180deg,transparent 40%,rgba(30,10,15,.78))"></div>
+        <div class="absolute top-3 left-3 chip text-white backdrop-blur" style="background:rgba(0,0,0,.42)">${esc(t.tag)}</div>
+        <div class="wax" style="position:absolute;top:12px;right:12px;width:40px;height:40px;font-size:15px">S</div>
+        <div class="absolute bottom-3 left-4">
+          <div class="font-serif text-2xl text-white">${esc(t.name)}</div>
+          <div class="text-[10px] tracking-[.2em] uppercase text-goldlight">Scratch + opening card included</div>
+        </div>
+      </div>
+      <div class="p-4 flex items-center justify-between gap-3">
+        <div class="text-xs text-stone-500">${esc(t.mood)} mood</div>
+        <button onclick="openSignup('${esc(t.name)}')" class="btn-wine px-4 py-2.5 rounded-full text-xs font-bold btn-press">Use this design</button>
+      </div>
+    </div>
+  `).join('');
+  // reveal observer for injected cards
+  const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }), {threshold:.12});
+  grid.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+})();
+
+/* ============================================================
+   FAQ
+============================================================ */
+const FAQS = [
+  ['Is ShaadiMotion really free to start?','Yes — create your full invitation, open the card, add your photos and set up the scratch reveal completely free. You pay only once when you publish. No subscription, no hidden charges.'],
+  ['How does the card-open animation work?','Your invitation arrives as a sealed cover with a wax seal. When a guest taps it, the cover swings open in 3D on the left edge and your invitation is revealed. If you have a video, it plays automatically inside the opened card.'],
+  ['What is the scratch reveal?','A shimmering gold foil layer sits over your wedding date. Guests drag a finger across it, the foil peels away, sparkles burst, and your date, venue and time are revealed. It works on every phone with touch or a mouse.'],
+  ['Do my guests need to install an app?','Never. Your invitation is a fast mobile website link. It opens instantly from WhatsApp, Instagram, SMS or email — even on a slow connection.'],
+  ['Can I edit after publishing?','Unlimited edits, forever. Change timings, add photos, swap the film or update the date. Your link stays exactly the same and updates instantly for everyone.'],
+  ['How does pricing work?','Simple one-time pricing: Save the Date ₹299, Starter ₹699, Premium ₹999. One payment, no monthly subscription, hosting included for 12 months.']
+];
+
+(function renderFaq(){
+  const list = $('#faqList');
+  if(!list) return;
+  list.innerHTML = FAQS.map(([q,a])=>`
+    <div class="faq-item reveal bg-white rounded-3xl border border-[#f0e6d6] shadow-card overflow-hidden">
+      <button class="w-full flex items-center justify-between gap-4 text-left px-5 md:px-6 py-5">
+        <span class="font-semibold text-[15px] md:text-base text-charcoal">${esc(q)}</span>
+        <span class="faq-icon shrink-0 w-8 h-8 rounded-full bg-[#FFF3E2] text-wine text-lg flex items-center justify-center">+</span>
+      </button>
+      <div class="faq-a"><p class="px-5 md:px-6 pb-5 text-sm text-stone-600 leading-relaxed">${esc(a)}</p></div>
+    </div>
+  `).join('');
+
+  list.querySelectorAll('.faq-item').forEach(item=>{
+    item.querySelector('button').addEventListener('click', ()=>{
+      const isOpen = item.classList.contains('open');
+      list.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+      if(!isOpen) item.classList.add('open');
+    });
+  });
+
+  const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }), {threshold:.12});
+  list.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+})();
+
+/* ============================================================
+   SIGNUP MODAL
+============================================================ */
+function openSignup(design){
+  const r = $('#modalRoot');
+  r.innerHTML = `
+    <div class="modal-bg show" onclick="if(event.target===this)closeModal()">
+      <div class="modal-card bg-ivory rounded-3xl w-full max-w-lg shadow-lux relative p-7 md:p-9">
+        <div class="flex justify-between items-start mb-5">
+          <div>
+            <div class="chip bg-gold/30 text-wine mb-2">${design ? 'DESIGN: '+esc(design).toUpperCase() : 'START FREE'}</div>
+            <div class="font-serif text-3xl text-charcoal">Begin your story</div>
+            <p class="text-sm text-stone-500 mt-1">Design free • Pay only when you publish • Unlimited edits</p>
+          </div>
+          <button onclick="closeModal()" class="w-9 h-9 rounded-full bg-stone-100 hover:bg-stone-200 shrink-0">✕</button>
+        </div>
+        <div class="space-y-3">
+          <div>
+            <label class="lbl">Your name</label>
+            <input id="suName" class="field" placeholder="e.g. Aarav Sharma">
+          </div>
+          <div>
+            <label class="lbl">Email or phone</label>
+            <input id="suEmail" class="field" placeholder="you@example.com">
+          </div>
+          <button onclick="submitSignup()" class="btn-gold w-full py-4 rounded-2xl font-bold btn-press">Create My Free Invitation →</button>
+          <div class="text-center text-[11px] text-stone-500">By continuing you agree to our Terms &amp; Privacy Policy.</div>
+        </div>
+      </div>
+    </div>`;
+}
+function closeModal(){
+  const m = $('#modalRoot .modal-bg');
+  if(m){ m.classList.remove('show'); setTimeout(()=> $('#modalRoot').innerHTML = '', 340); }
+}
+function submitSignup(){
+  const n = ($('#suName')?.value || '').trim();
+  if(!n){ toast('Please enter your name','error'); return; }
+  closeModal();
+  toast('Welcome, ' + n.split(' ')[0] + '! Your studio is ready ✨');
+}
+
+/* ============================================================
+   BOOT
+============================================================ */
+function boot(){
+  const heroCard = $('#heroCard');
+  if(heroCard){
+    initOpenableCards();
+    // hero card has no video; simple open/close is handled by initOpenableCards
+  } else {
+    initOpenableCards();
+  }
+
+  // every scratch wrap on the page
+  $$('[data-scratch]').forEach(initScratch);
+
+  // nudge the hero card open once so visitors understand the interaction
+  setTimeout(()=>{
+    const c = $('#heroCard');
+    if(!c || c.classList.contains('open')) return;
+    const page = c.querySelector('[data-oc-open]');
+    if(!page) return;
+    // subtle attention wiggle via CSS animation already runs; add a hint pulse
+  }, 2600);
+}
+boot();
+
+/* close modal on Escape */
+document.addEventListener('keydown', e=>{ if(e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>
